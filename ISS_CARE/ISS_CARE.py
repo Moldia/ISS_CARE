@@ -1,7 +1,6 @@
 from __future__ import print_function, unicode_literals, absolute_import, division
 import numpy as np
 import matplotlib.pyplot as plt
-
 %matplotlib inline
 %config InlineBackend.figure_format = 'retina'
 import tifffile
@@ -81,7 +80,8 @@ def ISS_CARE(directory,
             if not os.path.exists(output_dir+fold):
                 os.makedirs(output_dir+fold)
             restored=skimage.img_as_float32(restored)
-            tifffile.imsave(output_dir + fold +'/'+ file, restored)
+            skimage.io.imsave(output_dir + fold +'/'+ file, restored)
+            #tifffile.imsave(output_dir + fold +'/'+ file, restored)
     #restored = model.predict(x, axes)    
     
     #Copy the DAPI folders without CAREing them
