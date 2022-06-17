@@ -3,4 +3,4 @@ Content Aware Image Restoration (CARE) is a ML-based method for image denoising.
 
 You can find the examples on how to use it in the folder "Notebooks".
 
-You can find the pretrained models in the folder "models"
+You can find the pretrained models in the folder "models". Our best performing model on ISS data is called "spots". Details about the image training set are available upon request.
