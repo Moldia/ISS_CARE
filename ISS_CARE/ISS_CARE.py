@@ -80,8 +80,8 @@ def ISS_CARE(directory,
             if not os.path.exists(output_dir+fold):
                 os.makedirs(output_dir+fold)
             restored=skimage.img_as_float32(restored)
-            skimage.io.imsave(output_dir + fold +'/'+ file, restored)
-            #tifffile.imsave(output_dir + fold +'/'+ file, restored)
+            #skimage.io.imsave(output_dir + fold +'/'+ file, restored)
+            tifffile.imsave(output_dir + fold +'/'+ file, restored.astype('uint16'))
     #restored = model.predict(x, axes)    
     
     #Copy the DAPI folders without CAREing them
